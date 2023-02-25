@@ -3,6 +3,7 @@ package juanluis.cailiu.personajesrickandmorty.presenter.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.view.MenuItem
 import coil.load
 import juanluis.cailiu.personajesrickandmorty.R
 import juanluis.cailiu.personajesrickandmorty.databinding.ActivityMainBinding
@@ -16,6 +17,8 @@ class Personajes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPersonajesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         val name = intent.getStringExtra("name")
         val species = intent.getStringExtra("species")
@@ -38,6 +41,15 @@ class Personajes : AppCompatActivity() {
         val date = inputFormat.parse(created)
         val outputDate = outputFormat.format(date)
         return outputDate
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 
