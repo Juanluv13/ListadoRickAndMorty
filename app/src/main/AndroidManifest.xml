@@ -15,8 +15,8 @@
         android:theme="@style/Theme.PersonajesRickAndMorty"
         tools:targetApi="31">
         <activity
-            android:name=".Personajes"
-            android:exported="false" />
+            android:name=".presenter.view.Personajes"
+            android:exported="true" />
         <activity
             android:name=".presenter.view.MainActivity"
             android:exported="true">

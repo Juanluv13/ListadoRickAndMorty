@@ -1,5 +1,6 @@
 package juanluis.cailiu.personajesrickandmorty.presenter.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -61,7 +62,14 @@ class MainActivity : AppCompatActivity() ,CharacterAdapter.MyclickListener{
 
     override fun onClick(position: Int) {
         val clickedItem = characterAdapter.differ.currentList[position]
-        println(clickedItem.name)
+        println( clickedItem.created)
+        val intent = Intent(this, Personajes::class.java)
+        intent.putExtra("name", clickedItem.name)
+        intent.putExtra("species", clickedItem.species)
+        intent.putExtra("created", clickedItem.created)
+        intent.putExtra("image", clickedItem.image)
+        intent.putExtra("gender", clickedItem.gender)
+        startActivity(intent)
     }
 
 }

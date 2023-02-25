@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,4 +7,107 @@
     android:layout_height="match_parent"
     tools:context=".presenter.view.Personajes">
 
+    <ImageView
+        android:id="@+id/img_Character"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/textBoxContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Nombre : "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_nameCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Especie : "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_specieCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Genero: "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_genderCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Fecha de creacion: "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_createdCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="158dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

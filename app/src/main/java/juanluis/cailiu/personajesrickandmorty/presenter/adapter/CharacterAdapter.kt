@@ -1,12 +1,9 @@
 package juanluis.cailiu.personajesrickandmorty.presenter.adapter
 
 import android.annotation.SuppressLint
-import android.content.Intent
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
