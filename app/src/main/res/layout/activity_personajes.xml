@@ -42,6 +42,7 @@
             android:text="Nombre : "
             android:textSize="20dp" />
 
+
         <TextView
             android:id="@+id/tv_nameCharacter"
             android:layout_width="match_parent"
@@ -51,6 +52,7 @@
             android:gravity="center"
             android:textSize="25dp"
             android:hint="Text Box 1" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -103,11 +105,115 @@
             android:hint="Text Box 1" />
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/textBoxContainerEditable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Nombre : "
+            android:textSize="20dp" />
+
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Especie : "
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/ed_Especie"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Genero: "
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/ed_genero"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Fecha de creacion: "
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/ed_fechaCreacion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="Text Box 1" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_EditarDatos"
+        android:layout_width="265dp"
+        android:layout_height="46dp"
+        android:text="Editar Datos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="265dp"
+        android:layout_height="46dp"
+        android:text="Guardar Datos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="158dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
