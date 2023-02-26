@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.MyclickListener {
             setHasFixedSize(true)
         }
 
+
         lifecycleScope.launchWhenCreated {
             characterViewModel.state.collect {
                 when {
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.MyclickListener {
                 }
             }
         }
+
+
         val simpleCalback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
             override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
                 return false
@@ -62,9 +65,16 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.MyclickListener {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.bindingAdapterPosition
                 val itemToDelete = characterAdapter.differ.currentList[position]
+                characterViewModel.deleteCharacter(itemToDelete)
+                binding.recyclerView.adapter?.notifyItemRemoved(position)
+
             }
 
         }
+        val itemTouchHelper = ItemTouchHelper(simpleCalback)
+        itemTouchHelper.attachToRecyclerView(binding.recyclerView)
+
+
 
     }
 

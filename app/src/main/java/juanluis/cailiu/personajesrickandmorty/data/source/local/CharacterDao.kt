@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import juanluis.cailiu.personajesrickandmorty.data.source.local.entity.CharacterEntity
+import juanluis.cailiu.personajesrickandmorty.domain.model.CharacterModel
 
 @Dao
 interface CharacterDao {
@@ -21,6 +22,11 @@ interface CharacterDao {
     suspend fun characterSelect(): List<CharacterEntity>
 
 
+    companion object {
+        fun deleteCharacter(characterModel: CharacterModel) {
+
+        }
+    }
 
 }
 
