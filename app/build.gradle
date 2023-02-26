@@ -51,21 +51,16 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    // Fragment
     implementation "androidx.fragment:fragment-ktx:1.5.2"
-    // Activity
+
     implementation "androidx.activity:activity-ktx:1.5.1"
-    // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
-    // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
 
-    // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
 
-    // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
 
@@ -78,25 +73,17 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
     kapt "androidx.hilt:hilt-compiler:1.0.0"
 
-    //coil
     implementation("io.coil-kt:coil:1.4.0")
 
-
-
-    // Kotlin
     implementation('androidx.navigation:navigation-fragment-ktx:2.5.2')
     implementation('androidx.navigation:navigation-ui-ktx:2.5.2')
 
-    // Feature module Support
     implementation('androidx.navigation:navigation-dynamic-features-fragment:2.5.2')
 
-    // Testing Navigation
     androidTestImplementation('androidx.navigation:navigation-testing:2.5.2')
 
-    //Paging
     implementation "androidx.paging:paging-runtime-ktx:3.1.1"
 
-    //room
     implementation('androidx.room:room-runtime:2.4.3')
     kapt('androidx.room:room-compiler:2.4.3')
     implementation('androidx.room:room-ktx:2.4.3')

@@ -32,7 +32,7 @@ class CharacterAdapter (val listener:MyclickListener): RecyclerView.Adapter<Char
     inner class MyViewHolder(val binding: ItemCardBinding) : RecyclerView.ViewHolder(binding.root){
         init {
             itemView.setOnClickListener{
-                val position=adapterPosition
+                val position=bindingAdapterPosition
                 listener.onClick(position)
             }
         }

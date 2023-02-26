@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import juanluis.cailiu.personajesrickandmorty.domain.usecase.CharacterUseCase
 import juanluis.cailiu.personajesrickandmorty.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import juanluis.cailiu.personajesrickandmorty.domain.repository.CharacterRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,6 +1,7 @@
 package juanluis.cailiu.personajesrickandmorty.data.source.local
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -18,6 +19,8 @@ interface CharacterDao {
 
     @Query("select * from character")
     suspend fun characterSelect(): List<CharacterEntity>
+
+
 
 }
 
