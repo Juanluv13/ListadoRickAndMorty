@@ -25,9 +25,10 @@ class CharacterUseCase @Inject constructor(private val repository: CharacterRepo
                 emit(Resource.Success<List<CharacterModel>>(remote))
             }
         } catch (e: HttpException) {
-            emit(Resource.Error<List<CharacterModel>>(e.localizedMessage?: "No internet connection"))
+            emit(Resource.Error<List<CharacterModel>>(e.localizedMessage?: "No hay conexion a internet"))
         } catch (e: IOException) {
             emit(Resource.Error<List<CharacterModel>>("error"))
         }
     }
+
 }
